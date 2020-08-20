@@ -1,0 +1,53 @@
+.form-box {
+    min-width: 800px;
+    background: #fdfd00;
+    margin: 0 auto;
+
+}
+
+h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .row {
+        min-height: 50px;
+        margin: 10px 0;
+       
+        padding: 10px;
+        label {
+            text-transform: uppercase;
+            display: block;
+            margin-right: 20px;
+            padding: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        input {
+            min-height: 20px;
+            min-width: 500px;
+        }
+    }
+
+    .btn {
+        display: inline-block;
+        background-color: #24242e;
+        max-width: 150px;
+        padding: 10px;
+        margin: 10px 0;
+        color: #fff;
+        font-size: 1.5rem;
+         
+        
+    }
+}
+
+
+
