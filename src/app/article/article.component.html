@@ -1,1 +1,18 @@
-<p>article works!</p>
+<div class="article">
+    <div class="points">
+        {{ article.votes }}
+    </div>
+    <div class="right-box">
+        <h1>{{ article.title }}</h1>
+        (( <a href="#">{{ article.link }}</a> ))
+
+        <div class="vote-btns">
+            <div class="upvote">
+                <a href="#">upvote</a>
+            </div>
+            <div class="downvote">
+                <a href="#">downvote</a>
+            </div>
+        </div>
+    </div>
+</div>
