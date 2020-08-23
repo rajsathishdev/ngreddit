@@ -2,6 +2,10 @@
   <h1 style="background-color: black; color:white;margin:0; padding: 10px;text-transform: uppercase;font-weight: 500;">Angular Reddit Clone</h1>
 
   <app-addarticle></app-addarticle>
+  <ng-container *ngFor="let article of articles">
+    <app-article [article]="article"></app-article>
+  </ng-container>
+  
 
   <router-outlet></router-outlet>
 </div>

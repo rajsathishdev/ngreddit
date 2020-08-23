@@ -1,0 +1,69 @@
+.article {
+    max-width: 530px;
+    margin: 20px auto;
+    display: flex;
+    border: 1px solid #000;
+   
+    min-height: 30vh;
+    padding:0;
+        
+    .left-box {
+        flex-basis: 30%;
+        background-color: lavenderblush;
+        align-self: center;
+        max-height: 37.5vh;
+        height: 37.5vh;
+        min-width: 180px;
+       
+    }
+
+    .vote {
+        text-align: center;
+        margin-top: 13vh;
+        font-size: 30px;
+        
+    }
+
+    .right-box {
+        margin-left: 5px;
+
+        h1 {
+           text-transform: uppercase;
+           margin-bottom: 0;
+        }
+
+        a, a:link, a:visited {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .vote-btns {
+            margin-top: 50px;
+            display: flex;
+            justify-content: space-between;
+            min-width: 340px;
+         
+            align-items: center;
+            font-size: 30px;
+
+            .upvote::before {
+                content: "^";
+                margin-right: 5px;
+                padding-top: 5px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            .downvote::before {
+                content: ">";
+                margin-right: 5px;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+            a {
+                text-transform: capitalize;
+            }
+        }
+    }
+}

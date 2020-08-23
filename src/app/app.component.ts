@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RedditService } from './reddit.service';
+import { Article } from './models/article.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ngbase';
+  articles: Article[] = [];
+  constructor(private redditService: RedditService) {
+
+  }
+
+  ngOnInit(): void {
+    this.articles = this.redditService.getArticles();
+     
+  }
 }

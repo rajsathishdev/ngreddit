@@ -1,16 +1,19 @@
 <div class="article">
-    <div class="points">
-        {{ article.votes }}
+    <div class="left-box">
+        <div class="vote">
+            {{ article.votes }}
+        </div>
+      
     </div>
     <div class="right-box">
         <h1>{{ article.title }}</h1>
         (( <a href="#">{{ article.link }}</a> ))
 
         <div class="vote-btns">
-            <div class="upvote">
+            <div class="upvote" (click)="voteUp()"> 
                 <a href="#">upvote</a>
             </div>
-            <div class="downvote">
+            <div class="downvote" (click)="voteDown()">
                 <a href="#">downvote</a>
             </div>
         </div>

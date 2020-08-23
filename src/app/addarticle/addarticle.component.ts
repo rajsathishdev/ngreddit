@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticleComponent } from '../article/article.component';
 import { Article } from '../models/article.model';
+import { RedditService } from '../reddit.service';
 
 @Component({
   selector: 'app-addarticle',
@@ -9,15 +10,20 @@ import { Article } from '../models/article.model';
 })
 export class AddarticleComponent implements OnInit {
 
-  articles: Article[] = [];
-  constructor() { }
+   
+  constructor(private redditService: RedditService) { }
 
   ngOnInit(): void {
   }
 
   addTitle(title: HTMLInputElement, link: HTMLInputElement): boolean {
-
-     this.articles.push(new Article(title.value, link.value));
+    if(title.value !== '' && link.value !== '') {
+       
+      this.redditService.addArticle(new Article(title.value, link.value));
+      title.value ="";
+      link.value="";
+    }
+    
      return false;
   }
 
